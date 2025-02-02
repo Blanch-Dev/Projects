@@ -1,0 +1,2 @@
+SFML (I'm using 3.0.0) install command: sudo apt-get install libsfml-dev
+compile command: g++ port_scan.cpp -o port_scan -lsfml-network -lsfml-system
