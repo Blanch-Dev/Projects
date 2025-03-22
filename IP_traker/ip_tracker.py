@@ -11,20 +11,20 @@ def getDataByIP(ip):
 
 # Show all the data from the API
 def printData(data):
-    print("\nIP:",data["ip"])
-    print("Network:",data["network"])
-    print("Continent:",data["continent_code"])
-    print("Country:",data["country_name"])
-    print("Region:",data["region"])
-    print("City:",data["city"])
-    print("Postal Code:",data["postal"])
-    print("Latitude:",data["latitude"])
-    print("Longitude:",data["longitude"])
-    print("Timezone:",data["timezone"])
-    print("Calling code:",data["country_calling_code"])
-    print("Currency:",data["currency_name"])
-    print("ASN:",data["asn"])
-    print("Organitation:",data["org"])
+    print("\nIP:", data["ip"])
+    print("Network:", data["network"])
+    print("Continent:", data["continent_code"])
+    print("Country:", data["country_name"])
+    print("Region:", data["region"])
+    print("City:", data["city"])
+    print("Postal Code:", data["postal"])
+    print("Latitude:", data["latitude"])
+    print("Longitude:", data["longitude"])
+    print("Timezone:", data["timezone"])
+    print("Calling code:", data["country_calling_code"])
+    print("Currency:", data["currency_name"])
+    print("ASN:", data["asn"])
+    print("Organitation:", data["org"])
 
 # Menu to pick what you want to do
 def menu():
@@ -42,11 +42,13 @@ def menu():
             if re.match(r"^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$", ip):
                 printData(getDataByIP(ip))
             else:
-                print("\nBad IP, they are form by 4 numbers separated by points no number bigger than 255 (example 217.34.123.89)")
+                print(
+                    "\nBad IP, they are form by 4 numbers separated by points no number bigger than 255 (example 217.34.123.89)")
         else:
             break
 
-try:    
+
+try:
     menu()
 except:
     print()
