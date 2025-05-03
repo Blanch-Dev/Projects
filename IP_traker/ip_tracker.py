@@ -2,14 +2,20 @@ from requests import get
 import re
 
 # API call without IP to take your own data
+
+
 def getOwnData():
     return get('https://ipapi.co/json/').json()
 
 # API call with IP to take the IP data
+
+
 def getDataByIP(ip):
     return get('https://ipapi.co/'+ip+'/json/').json()
 
 # Show all the data from the API
+
+
 def printData(data):
     print("\nIP:", data["ip"])
     print("Network:", data["network"])
@@ -27,6 +33,8 @@ def printData(data):
     print("Organitation:", data["org"])
 
 # Menu to pick what you want to do
+
+
 def menu():
     while True:
         print("\nIP TRACKER \n")
@@ -48,7 +56,4 @@ def menu():
             break
 
 
-try:
-    menu()
-except:
-    print()
+menu()
