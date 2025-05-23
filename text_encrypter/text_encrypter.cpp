@@ -1,7 +1,6 @@
 #include "hashpp.h"
 #include "plusaes.hpp"
 #include <iostream>
-#include <memory>
 #include <ostream>
 #include <string>
 #include <vector>
