@@ -72,7 +72,14 @@ int main(int argc, char *argv[]) {
   std::cout << "Password to encrypt: " << std::endl;
   std::cin >> password;
 
-  std::cout << toStringFromVector(encrypt(message, password));
+  std::cout << toStringFromVector(encrypt(message, password)) << std::endl;
+
+  std::cout << "Message to decrypt: " << std::endl;
+  std::cin >> message;
+  std::cout << "Password to decrypt: " << std::endl;
+  std::cin >> password;
+
+  std::cout << toStringFromVector(decrypt(message, password)) << std::endl;
 
   return 0;
 }

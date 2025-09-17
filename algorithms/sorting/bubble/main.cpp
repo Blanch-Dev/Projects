@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 }
 
 bool isArrayShorted(int arrayInQuestion[]) {
-  for (int i = 1; i < std::size(arrayInQuestion) - 1; i++) {
+  for (int i = 1; sizeof(arrayInQuestion) - 1 > i; i++) {
     if (arrayInQuestion[i - 1] > arrayInQuestion[i]) {
       return false;
     }
