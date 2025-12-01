@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ostream>
+#include <string>
 #include <vector>
 
 class Task {
@@ -37,9 +38,10 @@ int menu() {
 int addTask() {
   std::string name, description;
   std::cout << "Name: ";
-  std::cin >> name;
+  // ERROR
+  std::getline(std::cin, name);
   std::cout << "Description: ";
-  std::cin >> description;
+  std::getline(std::cin, description);
   tasks.insert(tasks.end(), Task(name, description));
   return 0;
 }
